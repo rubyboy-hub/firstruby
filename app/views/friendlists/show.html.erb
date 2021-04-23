@@ -1,0 +1,33 @@
+<div class="jumbotran">
+  <p>
+  <strong>First name:</strong>
+  <%= @friendlist.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @friendlist.last_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @friendlist.gender %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @friendlist.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @friendlist.phone %>
+</p>
+<p id="notice"><%= notice %></p>
+
+
+<%= link_to 'Edit', edit_friendlist_path(@friendlist), class:"btn btn-primary"%> 
+<%= link_to 'Back', friendlists_path, class:"btn btn-primary"%>
+
+</div>
+

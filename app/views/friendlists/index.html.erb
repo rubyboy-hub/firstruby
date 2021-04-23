@@ -1,0 +1,36 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Friend Lists</h1>
+
+<table class="table table-striped table-bordered table-dark table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Gender</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @friendlists.each do |friendlist| %>
+      <tr>
+        <td><%= friendlist.first_name %></td>
+        <td><%= friendlist.last_name %></td>
+        <td><%= friendlist.gender %></td>
+        <td><%= friendlist.email %></td>
+        <td><%= friendlist.phone %></td>
+        <td><%= link_to 'Show', friendlist %></td>
+        <td><%= link_to 'Edit', edit_friendlist_path(friendlist) %></td>
+        <td><%= link_to 'Destroy', friendlist, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<br>
+
+<%= link_to 'Add New Friend', new_friendlist_path,class:"btn btn-primary" %>
